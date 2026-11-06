@@ -33,7 +33,7 @@ For any other CPU, or if the included library does not work, build it yourself o
     cd usbdmx
     make libusbdmx.so
 
-Then set dll_path in the script to the full path of the new libusbdmx.so.
+Then enter the full path of the new libusbdmx.so as "library" in config.json.
 
 # Setup:
 
@@ -43,40 +43,24 @@ Steo 2: Go into the directory: cd ARTNET-TO-USBDMX
 
 Step 3: Connect your Interface to the Machine
 
-Step 4: Get the Serial-Number of your Interface with this command: dmesg | grep -i usb
+Step 4: Run the setup wizard: python3 setup-wizard.py
 
-     The Output should look something like this:
-     
-     Couldn't open device, some information will be missing
-     
-     Couldn't open device, some information will be missing
-     
-     Couldn't open device, some information will be missing
-     
-     Couldn't open device, some information will be missing
-     
-     Couldn't open device, some information will be missing
-     
-       iManufacturer           1 Digital Enlightenment
-       
-        iProduct                2 USB DMX
-        
-        iSerial                 3 0000800010011617      <--- Serial Number
-        
-        bNumConfigurations      1
-        
-        Configuration Descriptor:
-        
-          bLength                 9
-          
-Step 5: Copy the Serial-Number and paste it in line 8 in the quotation marks: SERIAL_NUMBER = b"0000800010011617"
+     It finds the serial number when you plug the interface back in, then asks for the direction, protocol and number of each universe. The settings are saved in config.json.
 
-Step 6: Change dll_path in the script to the full path of the library for your CPU (see Included Libraries).
+Step 5: Now you can run the script with python3 usbdmx-artnet.py
 
-Step 7: Additionally, you can change the ArtNet Universes.
+You can run the setup wizard again at any time to change the settings.
 
-Step 8: Now you can save and run the script with python3 usbdmx-artnet.py
 
+# sACN
+
+The script can use sACN (E1.31) instead of Art-Net, for the DMX output, the DMX input, or both. Choose this in the setup wizard.
+
+The interface has one DMX output and one DMX input, so you can set up one universe per direction.
+
+sACN universes start at 1. If your machine has more than one network card, enter the IP of the right one in the setup wizard.
+
+If several sACN sources send the same universe, the highest priority wins. If a source stops, the last values stay on the output.
 
 # Autostart
 
@@ -124,5 +108,5 @@ If the Script says, that it cant open the interface, try to run it as root. To u
 If you have problems or other issues, you can create a tab under "Issues" or send me an EMail: PigcraftTV50@gmail.com
 
 
-Additionally, parameters such as operating mode or the Art-Net universe can be customized directly within the source code.
+Additionally, the operating mode can be customized directly within the source code.
 
