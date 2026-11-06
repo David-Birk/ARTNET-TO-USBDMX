@@ -15,4 +15,4 @@ Contact for license requests: PigcraftTV50@gmail.com
 
 ## Third-party components
 
-The license above does not cover `usbdmx-x86_64.so`. It is built from [fx5/usbdmx](https://github.com/fx5/usbdmx) (commit 684518e) under a BSD license. See [LICENSE-usbdmx.txt](LICENSE-usbdmx.txt).
+The license above does not cover `usbdmx.so` and `usbdmx-x86_64.so`. Both are built from [fx5/usbdmx](https://github.com/fx5/usbdmx) under a BSD license. See [LICENSE-usbdmx.txt](LICENSE-usbdmx.txt).

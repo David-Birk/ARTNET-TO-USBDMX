@@ -1,4 +1,4 @@
-License notice for usbdmx-x86_64.so, built from https://github.com/fx5/usbdmx (commit 684518e).
+License notice for usbdmx.so and usbdmx-x86_64.so, built from https://github.com/fx5/usbdmx.
 
 ===== usbdmx.c =====
 
