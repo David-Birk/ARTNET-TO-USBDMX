@@ -133,7 +133,7 @@ def main():
 
     library = LIBRARIES.get(platform.machine())
     if library is None:
-        print(f"There is no included library for {platform.machine()}. See 'Included Libraries' in the README.")
+        print(f"There is no included library for {platform.machine()}. See docs/INSTALL.md to build one.")
         library_path = ask_text("Enter the full path of your own library", "")
     else:
         library_path = os.path.join(SCRIPT_DIR, library)
@@ -168,7 +168,7 @@ def main():
     print(f"DMX input:     {describe(dmx_in)}")
     print(f"Saved to {CONFIG_PATH}")
     if not os.path.exists(UDEV_RULE):
-        print("\nNo udev rule found, so you might have to run the script as root (see Problem Solving in the README).")
+        print("\nNo udev rule found, so you might have to run the script as root (see docs/INSTALL.md).")
     print("\nStart it with: python3 usbdmx-artnet.py")
 
 

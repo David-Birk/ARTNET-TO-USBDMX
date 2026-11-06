@@ -12,3 +12,7 @@ All rights remain with the copyright holder. Any violation of these terms will r
 THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 Contact for license requests: PigcraftTV50@gmail.com
+
+## Third-party components
+
+The license above does not cover `usbdmx-x86_64.so`. It is built from [fx5/usbdmx](https://github.com/fx5/usbdmx) (commit 684518e) under a BSD license. See [LICENSE-usbdmx.txt](LICENSE-usbdmx.txt).
